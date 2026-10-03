@@ -25,15 +25,12 @@ const cube = function(a){
 };
 
 const average = function(a,b){
-  if(a+b !== 0){
-    return (a+b)/2;
-  }
-  else return 0;
+  return (a+b)/2;
 };
 
 const calculate = function(){
   let sum = 0;
-  for(let i = 0;i<10;++i){
+  for(let i = 0;i<10  ;++i){
     sum += average(cube(i),square(i));
   }
   return sum;
