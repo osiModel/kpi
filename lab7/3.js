@@ -1,9 +1,7 @@
 'use strict'
 
 function difference(array1, array2){
-    const res = [];
-    array1.forEach((e)=> {if(!array2.includes(e))res.push(e)}); 
-    return res;
+    return array1.filter((e)=> !array2.includes(e)); 
 }
 
 const array1 = ['Beijing', 'Kiev'];
