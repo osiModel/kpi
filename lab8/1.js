@@ -1,17 +1,13 @@
-'use strict';
+'use strict'
 
-const fn = (par, callback) => {
-  if (!par) {
-    callback(new Error('Parameter needed'));
-    return 'None';
+const obj = { a: 1, b: 2, c: 3 };
+
+function iterate(obj,callback){
+  for(const k in obj){
+    callback(k,obj[k],obj);
   }
-  callback(null, `Data ${par}`);
-  return 'Value';
-};
+}
 
-const res = fn('ex', (err, data) => {
-  if (err) throw err;
-  console.dir({ data });
+iterate(obj, (key, value) => {
+  console.log({ key, value });
 });
-
-console.dir({ res });
